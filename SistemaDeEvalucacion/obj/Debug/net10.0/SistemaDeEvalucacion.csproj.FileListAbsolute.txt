@@ -12,3 +12,4 @@
 /home/csharp/Desktop/SistemaDeEvalucacion/SistemaDeEvalucacion/obj/Debug/net10.0/SistemaDeEvalucacion.pdb
 /home/csharp/Desktop/SistemaDeEvalucacion/SistemaDeEvalucacion/obj/Debug/net10.0/SistemaDeEvalucacion.genruntimeconfig.cache
 /home/csharp/Desktop/SistemaDeEvalucacion/SistemaDeEvalucacion/obj/Debug/net10.0/ref/SistemaDeEvalucacion.dll
+/home/csharp/Desktop/SistemaDeEvalucacion/SistemaDeEvalucacion/obj/Debug/net10.0/SistemaDeEvalucacion.sourcelink.json

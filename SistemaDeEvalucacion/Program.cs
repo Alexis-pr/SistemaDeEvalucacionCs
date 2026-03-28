@@ -69,17 +69,14 @@ switch (resultado)
         break;
     case 5:
         Console.WriteLine("Ingresa 5 datos numericos: ");
-        int r = 0;
-        List<int> COuntNumeric = [];
-        for (int i = 1; i < 6; i++)
-        {
-            Console.WriteLine($"esta es la ronda {i}/5");
-            r = int.Parse(Console.ReadLine());
-            COuntNumeric.Add(r);
-        }
-
+        Calculadora listaN = new  Calculadora();
+        listaN.listaNumerica();
         break;
-        
+    case 6:
+        Console.WriteLine("Ingresa 5 caracteres: ");
+        Calculadora listaS = new  Calculadora();
+        listaS.listaStrings();
+        break;
 }
 
 
@@ -193,9 +190,38 @@ class Calculadora
     }
     
     // nivel 5
+
+
+    public void listaNumerica()
+    {
+       int r = 0;
+       int rTotal = 0;
+        List<int> CountNumeric = [];
+        for (int i = 1; i < 6; i++)
+        {
+            Console.WriteLine($"esta es la ronda {i}/5");
+            r = int.Parse(Console.ReadLine());
+            CountNumeric.Add(r);
+        }
+        Console.WriteLine($"los numeros dentro del listado son {CountNumeric.Count} ");
+        
+        foreach (int n in CountNumeric)
+        {
+            Console.Write($"[{n}]");
+            rTotal +=n;
+            
+        }
+        Console.WriteLine($" El resultado es: {rTotal}");
+       
+
+    }
     
-    
-    
+    //nivel 6
+
+    public void listaStrings()
+    {
+        
+    }
     
 }
 

@@ -1,0 +1,14 @@
+/home/csharp/Desktop/SistemaDeEvalucacion/SistemaDeEvalucacion/obj/Debug/net10.0/SistemaDeEvalucacion.GeneratedMSBuildEditorConfig.editorconfig
+/home/csharp/Desktop/SistemaDeEvalucacion/SistemaDeEvalucacion/obj/Debug/net10.0/SistemaDeEvalucacion.AssemblyInfoInputs.cache
+/home/csharp/Desktop/SistemaDeEvalucacion/SistemaDeEvalucacion/obj/Debug/net10.0/SistemaDeEvalucacion.AssemblyInfo.cs
+/home/csharp/Desktop/SistemaDeEvalucacion/SistemaDeEvalucacion/obj/Debug/net10.0/SistemaDeEvalucacion.csproj.CoreCompileInputs.cache
+/home/csharp/Desktop/SistemaDeEvalucacion/SistemaDeEvalucacion/bin/Debug/net10.0/SistemaDeEvalucacion
+/home/csharp/Desktop/SistemaDeEvalucacion/SistemaDeEvalucacion/bin/Debug/net10.0/SistemaDeEvalucacion.deps.json
+/home/csharp/Desktop/SistemaDeEvalucacion/SistemaDeEvalucacion/bin/Debug/net10.0/SistemaDeEvalucacion.runtimeconfig.json
+/home/csharp/Desktop/SistemaDeEvalucacion/SistemaDeEvalucacion/bin/Debug/net10.0/SistemaDeEvalucacion.dll
+/home/csharp/Desktop/SistemaDeEvalucacion/SistemaDeEvalucacion/bin/Debug/net10.0/SistemaDeEvalucacion.pdb
+/home/csharp/Desktop/SistemaDeEvalucacion/SistemaDeEvalucacion/obj/Debug/net10.0/SistemaDeEvalucacion.dll
+/home/csharp/Desktop/SistemaDeEvalucacion/SistemaDeEvalucacion/obj/Debug/net10.0/refint/SistemaDeEvalucacion.dll
+/home/csharp/Desktop/SistemaDeEvalucacion/SistemaDeEvalucacion/obj/Debug/net10.0/SistemaDeEvalucacion.pdb
+/home/csharp/Desktop/SistemaDeEvalucacion/SistemaDeEvalucacion/obj/Debug/net10.0/SistemaDeEvalucacion.genruntimeconfig.cache
+/home/csharp/Desktop/SistemaDeEvalucacion/SistemaDeEvalucacion/obj/Debug/net10.0/ref/SistemaDeEvalucacion.dll

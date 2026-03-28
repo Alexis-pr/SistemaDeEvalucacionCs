@@ -67,6 +67,19 @@ switch (resultado)
         Calculadora operacion = new Calculadora();
         operacion.Operaciones(resul);
         break;
+    case 5:
+        Console.WriteLine("Ingresa 5 datos numericos: ");
+        int r = 0;
+        List<int> COuntNumeric = [];
+        for (int i = 1; i < 6; i++)
+        {
+            Console.WriteLine($"esta es la ronda {i}/5");
+            r = int.Parse(Console.ReadLine());
+            COuntNumeric.Add(r);
+        }
+
+        break;
+        
 }
 
 
@@ -106,13 +119,10 @@ class Calculadora
 
     public int Operaciones(int opcion )
     {
-        
-        
         int numero1  = 0;
         int numero2  = 0;
         int resultado = 0;
       
-        
         switch (opcion)
         {
             case 1:
@@ -122,8 +132,8 @@ class Calculadora
                  ");
                 
                 Console.Write("Ingresa el primer valor: ");
-                
                 numero1  = int.Parse(Console.ReadLine());
+                
                 Console.Write("Ingresa el segundo valor: ");
                 numero2  = int.Parse(Console.ReadLine());
                 
@@ -138,6 +148,7 @@ class Calculadora
                  ");
                 Console.Write("Ingresa el primer valor: ");
                 numero1  = int.Parse(Console.ReadLine());
+                
                 Console.Write("Ingresa el segundo valor: ");
                  numero2  = int.Parse(Console.ReadLine());
                 
@@ -150,6 +161,7 @@ class Calculadora
                  ");
                 Console.Write("Ingresa el primer valor: ");
                  numero1  = int.Parse(Console.ReadLine());
+                
                 Console.Write("Ingresa el segundo valor: ");
                  numero2  = int.Parse(Console.ReadLine());
                 
@@ -163,6 +175,7 @@ class Calculadora
                  ");
                 Console.Write("Ingresa el primer valor: ");
                  numero1  = int.Parse(Console.ReadLine());
+                
                 Console.Write("Ingresa el segundo valor: ");
                  numero2  = int.Parse(Console.ReadLine());
 
@@ -170,17 +183,16 @@ class Calculadora
                 {
                     Console.Write("El numero 2 no puede ser cero");
                 }
-
-                
-
-                
-                resultado = numero1 / numero2;
+                else
+                {
+                    resultado = numero1 / numero2;
+                }
                 return resultado;
         }   
-        
         return resultado;
     }
     
+    // nivel 5
     
     
     

@@ -55,17 +55,10 @@ switch (resultado)
         concatenar.ConcatenarNombre(nombre, apellido);
         break;
     case 4:
-        Console.WriteLine(@$"Ingresa El numero de la operación que deseas realizar:
-            1. Suma.
-            2. Resta.
-            3. Multiplicacion.
-            4. Divicion.
-        ");
-
-        int resul = int.Parse(Console.ReadLine());
+       
         
         Calculadora operacion = new Calculadora();
-        operacion.Operaciones(resul);
+        operacion.Operaciones();
         break;
     case 5:
         Console.WriteLine("Ingresa 5 datos numericos: ");
@@ -75,6 +68,10 @@ switch (resultado)
     case 6:
         Calculadora listaS = new  Calculadora();
         listaS.listaStrings();
+        break;
+    case 7:
+        Calculadora arreglosAndBusquedad = new Calculadora();
+        arreglosAndBusquedad.arreglosYBusquedas();
         break;
 }
 
@@ -114,79 +111,104 @@ class Calculadora
     }
     
     // nivel4
-    public int Operaciones(int opcion )
+    public void Operaciones( )
     {
         int numero1  = 0;
         int numero2  = 0;
         int resultado = 0;
-      
-        switch (opcion)
-        {
-            case 1:
-                Console.Write(@$"----------
-                    Haz elegido la opción {opcion} de suma
-                ----------
-                 ");
-                
-                Console.Write("Ingresa el primer valor: ");
-                numero1  = int.Parse(Console.ReadLine());
-                
-                Console.Write("Ingresa el segundo valor: ");
-                numero2  = int.Parse(Console.ReadLine());
-                
-                resultado = numero1 + numero2;
-                Console.WriteLine(@$"El resultado es: {resultado}");
-                return resultado;
-                
-            case 2:
-                Console.Write(@$"----------
-                       Haz elegido la opción {opcion} de Resta
-                ----------
-                 ");
-                Console.Write("Ingresa el primer valor: ");
-                numero1  = int.Parse(Console.ReadLine());
-                
-                Console.Write("Ingresa el segundo valor: ");
-                 numero2  = int.Parse(Console.ReadLine());
-                
-                resultado = numero1 - numero2;
-                return resultado;
-            case 3:
-                Console.Write(@$"----------
-                       Haz elegido la opción {opcion} de multiplicacion
-                ----------
-                 ");
-                Console.Write("Ingresa el primer valor: ");
-                 numero1  = int.Parse(Console.ReadLine());
-                
-                Console.Write("Ingresa el segundo valor: ");
-                 numero2  = int.Parse(Console.ReadLine());
-                
-                resultado = numero1 * numero2;
-                return resultado;
-            
-            case 4:
-                Console.Write(@$"----------
-                       Haz elegido la opción {opcion} de división
-                ----------
-                 ");
-                Console.Write("Ingresa el primer valor: ");
-                 numero1  = int.Parse(Console.ReadLine());
-                
-                Console.Write("Ingresa el segundo valor: ");
-                 numero2  = int.Parse(Console.ReadLine());
 
-                if (numero2 == 0)
-                {
-                    Console.Write("El numero 2 no puede ser cero");
-                }
-                else
-                {
-                    resultado = numero1 / numero2;
-                }
-                return resultado;
-        }   
-        return resultado;
+        bool active = true;
+
+        while (active)
+        {
+            Console.WriteLine(@$"Ingresa El numero de la operación que deseas realizar:
+            1. Suma.
+            2. Resta.
+            3. Multiplicacion.
+            4. Divicion.
+            5. Salir.
+             ");
+
+            int opcion = int.Parse(Console.ReadLine());
+        
+        
+        
+            switch (opcion)
+            {
+                case 1:
+                    Console.Write(@$"----------
+                        Haz elegido la opción {opcion} de suma
+                    ----------
+                     ");
+                    
+                    Console.Write("Ingresa el primer valor: ");
+                    numero1  = int.Parse(Console.ReadLine());
+                    
+                    Console.Write("Ingresa el segundo valor: ");
+                    numero2  = int.Parse(Console.ReadLine());
+                    
+                    resultado = numero1 + numero2;
+                    Console.WriteLine(@$"El resultado es: {resultado}");
+                    break;
+                    
+                case 2:
+                    Console.Write(@$"----------
+                           Haz elegido la opción {opcion} de Resta
+                    ----------
+                     ");
+                    Console.Write("Ingresa el primer valor: ");
+                    numero1  = int.Parse(Console.ReadLine());
+                    
+                    Console.Write("Ingresa el segundo valor: ");
+                     numero2  = int.Parse(Console.ReadLine());
+                    
+                    resultado = numero1 - numero2;
+                    Console.WriteLine($"El resultado es: {resultado} ");
+                    break;
+                    
+                case 3:
+                    Console.Write(@$"----------
+                           Haz elegido la opción {opcion} de multiplicacion
+                    ----------
+                     ");
+                    Console.Write("Ingresa el primer valor: ");
+                     numero1  = int.Parse(Console.ReadLine());
+                    
+                    Console.Write("Ingresa el segundo valor: ");
+                     numero2  = int.Parse(Console.ReadLine());
+                    
+                    resultado = numero1 * numero2;
+                    Console.WriteLine($"El resultado es: {resultado} ");
+                    break;
+                
+                case 4:
+                    Console.Write(@$"----------
+                           Haz elegido la opción {opcion} de división
+                    ----------
+                     ");
+                    Console.Write("Ingresa el primer valor: ");
+                     numero1  = int.Parse(Console.ReadLine());
+                    
+                    Console.Write("Ingresa el segundo valor: ");
+                     numero2  = int.Parse(Console.ReadLine());
+
+                    if (numero2 == 0)
+                    {
+                        Console.WriteLine("El numero 2 no puede ser cero");
+                    }
+                    else
+                    {
+                        resultado = numero1 / numero2;
+                        Console.WriteLine($"El resultado es: {resultado} ");
+                    }
+                    break;
+                case 5:
+                    active = false;
+                    break;
+            }   
+            
+        
+        }
     }
     
     // nivel 5
@@ -256,7 +278,7 @@ class Calculadora
                      VerTarea();
                      break;
                  case 3:
-                     /*EliminarTarea();*/
+                     EliminarTarea();
                      break;
                  case 4:
                      contiene = false;
@@ -271,30 +293,82 @@ class Calculadora
             string tareanueva = Console.ReadLine();
             
             tareas.Add(tareanueva); 
-           
+           Console.WriteLine("La tarea Ha sido AGREGADA  ✅  ");
         }
 
         void VerTarea()
         {
+            Console.WriteLine($"-------------------------------------" +
+                                     $"Las tareas disponibles son:" +
+                              $"-------------------------------------");
+            /*for (int i = 1; i < tareas.Count(); i++)
+            {
+                Console.WriteLine($"{tareas[i]} - {tareas[i - 1]}");
+            }*/
             foreach (var tarea in tareas)
             {
-                Console.WriteLine($"las tareas disponibles del {tarea} ");
+                
+                Console.WriteLine($"{tarea}");
                 
             }
         }
         
-        /*static void EliminarTarea()
+        void EliminarTarea()
         {
+            VerTarea();
             
-            for (int i = 0; i < tareas().Count(); i++)
+            Console.WriteLine($"Seleccione el ID que desea borrar  ");
+            int id = int.Parse(Console.ReadLine());
+            
+            for (int i = 1; i < tareas.Count(); ++i)
             {
-                
+                if (id == i)
+                {
+                    tareas.RemoveAt(i);  
+                    Console.WriteLine($"El tarea ha sido eliminado correctamente ✅ ");
+                }
+                else
+                {
+                    Console.WriteLine($"El tarea no existe el ID {id}");
+                }
             }
             
-        }*/
+            
+        }
        
     }
 
+    //nivel 7
+    public void arreglosYBusquedas()
+    {
+         /*string[] ciudades = {"Medellin", "Bogota", " Pereira", "cartagena"};*/
+        
+         string[] ciudades = new string[]
+        {
+            "Medellin", "Bogota", " Pereira", "cartagena","manizales"
+        };
+
+        
+        Console.WriteLine("Solicita una ciudad");
+        string nombreCiudad = Console.ReadLine();
+        bool existe = false;
+
+        foreach (var ciudad in ciudades)
+        {
+            if (ciudad == nombreCiudad)
+            {
+                Console.WriteLine($"El ciudad Existe y es {ciudad}");
+                existe = true;
+                break;
+            }
+           
+        }
+        if (!existe)
+        {
+            Console.WriteLine("La ciudad no existe");
+        }
+
+    }
     
 }
 

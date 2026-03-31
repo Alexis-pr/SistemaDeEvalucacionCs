@@ -73,9 +73,15 @@ switch (resultado)
         listaN.listaNumerica();
         break;
     case 6:
-        Console.WriteLine("Ingresa 5 caracteres: ");
+        Console.WriteLine(@$"Ingresa El numero de la operación que deseas realizar:
+            1. Agregar Tarea.
+            2. Ver tareas.
+            3. Eliminar tarea.
+           
+        ");
+        int res = int.Parse(Console.ReadLine());
         Calculadora listaS = new  Calculadora();
-        listaS.listaStrings();
+        listaS.listaStrings(res);
         break;
 }
 
@@ -89,6 +95,7 @@ class Calculadora
         Console.WriteLine($"El resultado es: {resultado}");
         return resultado;
     }
+    
     // nivel 2
     public double condicional(double a, double b, double c)
     {
@@ -112,8 +119,8 @@ class Calculadora
         string result = nombre + " " + apellido; // no es la mejor forma pero la que funciono
         Console.WriteLine($"el nombre es {result}");
     }
+    
     // nivel4
-
     public int Operaciones(int opcion )
     {
         int numero1  = 0;
@@ -190,13 +197,15 @@ class Calculadora
     }
     
     // nivel 5
-
-
     public void listaNumerica()
     {
        int r = 0;
+       int mayor = int.MinValue;
+       int menor = int.MaxValue;
+      
        int rTotal = 0;
-        List<int> CountNumeric = [];
+        List<int> CountNumeric = new List<int>();
+        
         for (int i = 1; i < 6; i++)
         {
             Console.WriteLine($"esta es la ronda {i}/5");
@@ -208,20 +217,83 @@ class Calculadora
         foreach (int n in CountNumeric)
         {
             Console.Write($"[{n}]");
+            if (n > mayor)
+            {
+                mayor = n;
+            }
+            if (n < menor)
+            {
+                menor = n;
+            }
+            
             rTotal +=n;
             
+            
         }
-        Console.WriteLine($" El resultado es: {rTotal}");
+        Console.WriteLine(@$" La suma total es: {rTotal}
+        El numero mayor es: {mayor} 
+        El numero menor es: {menor}
+        ");
        
 
     }
     
     //nivel 6
 
-    public void listaStrings()
+    public void listaStrings(int res)
     {
+        bool contiene = true;
+         List<string> tareas = new List<string>();
+         while (contiene)
+         {
+             switch (res)
+             {
+                 case 1:
+                     AgregarTarea();
+                     break;
+                 case 2:
+                     VerTarea();
+                     break;
+                 case 3:
+                     /*EliminarTarea();*/
+                     break;
+                 case 4:
+                     contiene = false;
+                     break;
+             }
+         }
         
+
+        void AgregarTarea()
+        {   
+            Console.WriteLine("Agregar una nueva tarea ");
+            string tareanueva = Console.ReadLine();
+            
+            tareas.Add(tareanueva); 
+           
+        }
+
+        void VerTarea()
+        {
+            foreach (var tarea in tareas)
+            {
+                Console.WriteLine($"las tareas disponibles del {tarea} ");
+                break;
+            }
+        }
+        
+        /*static void EliminarTarea()
+        {
+            
+            for (int i = 0; i < tareas().Count(); i++)
+            {
+                
+            }
+            
+        }*/
+       
     }
+
     
 }
 

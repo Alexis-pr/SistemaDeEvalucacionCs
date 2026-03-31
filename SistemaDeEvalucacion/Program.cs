@@ -73,15 +73,8 @@ switch (resultado)
         listaN.listaNumerica();
         break;
     case 6:
-        Console.WriteLine(@$"Ingresa El numero de la operación que deseas realizar:
-            1. Agregar Tarea.
-            2. Ver tareas.
-            3. Eliminar tarea.
-           
-        ");
-        int res = int.Parse(Console.ReadLine());
         Calculadora listaS = new  Calculadora();
-        listaS.listaStrings(res);
+        listaS.listaStrings();
         break;
 }
 
@@ -239,13 +232,21 @@ class Calculadora
     }
     
     //nivel 6
-
-    public void listaStrings(int res)
+    public void listaStrings()
     {
         bool contiene = true;
          List<string> tareas = new List<string>();
          while (contiene)
          {
+             Console.WriteLine(@$"Ingresa El numero de la operación que deseas realizar:
+            1. Agregar Tarea.
+            2. Ver tareas.
+            3. Eliminar tarea.
+            4. Salir.          
+            ");
+             
+         
+             int res = int.Parse(Console.ReadLine());
              switch (res)
              {
                  case 1:
@@ -278,7 +279,7 @@ class Calculadora
             foreach (var tarea in tareas)
             {
                 Console.WriteLine($"las tareas disponibles del {tarea} ");
-                break;
+                
             }
         }
         
